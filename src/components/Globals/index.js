@@ -1,5 +1,7 @@
 import React from 'react'
 
+import config from '../../.env.local_ip.json';
+
 import 'intl-pluralrules'
 import { AppLocalizationProvider } from '../../l10n.js'
 
@@ -99,8 +101,8 @@ class GlobalsProvider extends React.Component {
 			pageOpenTS: new Date(),
 			profileID: null,
 	
-			local_ip,
-			isDevEnvironment,
+			local_ip: config.LOCAL_IP,
+    		isDevEnvironment: config.IS_DEV_ENVIRONMENT,
 	
 			transitionDuration: 300,
 			isSmallScreen: true,
